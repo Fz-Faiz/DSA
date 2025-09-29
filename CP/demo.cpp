@@ -4,25 +4,23 @@ using namespace std;
 int main() {
     int t;
     cin >> t;
-    while(t--){
-        int x,y;
-        cin >> x >> y;
-        int xx = x, yy = y;
-        int i=0,j=0;
-        int steps = 0;
-        while(true){
-            if(i == x && j == y){
-                cout << i << j;
-                break;
-            }
-            if(i&1){
-                if(x&1) i += 
-                steps++;
-            }else{
-                steps++;
-            }
+    while(t--)
+    {
+        long long n ,k;
+        cin >> n >> k;
+        vector<long long> a(n);
+        for(int i =0 ;i<n;i++)
+            cin >> a[i];
+        vector<long long> copy_a = a;
+        sort(copy_a.begin(), copy_a.end());
+
+        if(copy_a == a || k>1){
+            cout << "YES" << endl;
         }
-        cout << i << j;
+        else{
+            cout<< "NO" << endl;
+        }
+
+
     }
-    
 }
